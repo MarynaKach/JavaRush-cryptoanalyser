@@ -7,7 +7,7 @@ Short Description
 
 Console application for encryption and decryption of the text by the key using Cesare method.
 
-Limitations
+Limitations in application
 
 It should be inserted the full pass to source and destination file. The Key of encryption/decryption 
 (here as to Key) is limited by the length of constant ALPHABET – 41.
