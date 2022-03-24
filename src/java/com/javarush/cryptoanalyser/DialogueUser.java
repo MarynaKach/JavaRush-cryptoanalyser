@@ -21,16 +21,15 @@ public class DialogueUser {
         return cryptoOption;
     }
 
-    public static String checkPathToFile(String askForPath, String askForPathAgain) {
+    public static String checkPathFile(String askForPath, String askForPathAgain) {
         printMassage(askForPath);
-        Scanner sc = new Scanner(System.in);
-        String pathToFile = sc.nextLine();
+        String pathToFile = ScannerSingleton.getInstance().nextLine();
         try {
             Path path = Path.of(pathToFile);
             boolean isPass = Files.exists(path);
             while (!isPass) {
                 printMassage(askForPathAgain);
-                pathToFile = sc.nextLine();
+                pathToFile = ScannerSingleton.getInstance().nextLine();
                 path = Path.of(pathToFile);
                 isPass = Files.exists(path);
             }
@@ -42,11 +41,10 @@ public class DialogueUser {
 
     public static int checkKeyOfCrypto(String askForKey) {
         printMassage(askForKey + Main.ALPHABET.length);
-        Scanner console = new Scanner(System.in);
-        int cryptoKey = console.nextInt();
+        int cryptoKey = ScannerSingleton.getInstance().nextInt();
         while (cryptoKey < 1 || cryptoKey > Main.ALPHABET.length) {
             System.out.println(askForKey + Main.ALPHABET.length);
-            cryptoKey = console.nextInt();
+            cryptoKey = ScannerSingleton.getInstance().nextInt();
         }
         return cryptoKey;
     }

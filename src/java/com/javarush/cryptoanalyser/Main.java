@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         String askSourcePath = "Hello, User, please, insert the path to source file:";
         String askForPathAgain = "It is not the path to the file. Please insert the pass to the file:";
-        String pathSourceFile = DialogueUser.checkPathToFile(askSourcePath, askForPathAgain);
+        String pathSourceFile = DialogueUser.checkPathFile(askSourcePath, askForPathAgain);
         String askDestinationPath = "Please, insert the path to destination file:";
-        String pathDestinationFile = DialogueUser.checkPathToFile(askDestinationPath, askForPathAgain);
+        String pathDestinationFile = DialogueUser.checkPathFile(askDestinationPath, askForPathAgain);
         String askForKey = "Please, type the key number for encoding from 1 to ";
         int cryptoKey = DialogueUser.checkKeyOfCrypto(askForKey);
         String chooseTypeCryptoMassage = "Please choose: \n- to encrypt, type 1, \n- to decrypt, type 2";
